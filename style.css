@@ -58,13 +58,34 @@ h1 {
   font-weight: 500;
 }
 
-.contact-info {
-  display: flex;
-  gap: 1.5rem;
+.header-meta {
   margin-top: 1.5rem;
   font-size: 0.9rem;
   color: var(--muted-color);
+}
+
+.location {
+  margin-bottom: 0.5rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
   flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contact-links a i {
+  transition: transform 0.2s, color 0.2s;
+}
+
+.contact-links a:hover i {
+  transform: scale(1.2);
 }
 
 section {
