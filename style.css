@@ -142,6 +142,49 @@ h2 {
   opacity: 0.9;
 }
 
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  background-color: var(--border-color);
+  color: var(--muted-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.tech-tag:hover {
+  filter: brightness(1.2);
+  transform: translateY(-1px);
+}
+
+.tag-lang {
+  color: #60a5fa;
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.tag-framework {
+  color: #c084fc;
+  border-color: rgba(192, 132, 252, 0.2);
+}
+
+.tag-db {
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.2);
+}
+
+.tag-infra {
+  color: #fb923c;
+  border-color: rgba(251, 146, 60, 0.2);
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
