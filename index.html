@@ -184,8 +184,26 @@
             oriel.bytesprism.com
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
           </a>
-          <span class="private">Source is private</span>
         </div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-name">Weather Station</div>
+          <div class="project-date">Jul 2026 — Present</div>
+        </div>
+        <div class="project-tag">Hardware + software build: a scrolling LED weather display</div>
+        <p>A Raspberry Pi Zero W polls a weather API and scrolls the forecast across a custom NeoPixel LED matrix,
+          hand-wired and soldered into an enclosure built from MDF. Wrote the text renderer myself: a bitmap font
+          gets converted into a boolean matrix per character, chunked into scrolling frames, then remapped to
+          physical LED index to account for the strip's alternating row wiring.</p>
+        <ul class="points">
+          <li>Built the full stack end to end — enclosure fabrication, LED soldering and wiring, GPIO/NeoPixel
+            driver code, and the weather API integration — with no framework or library doing the character
+            rendering for me.</li>
+          <li>Side project, built for fun alongside everything else.</li>
+        </ul>
+        <div class="stack"><span class="core">Python</span><span>Raspberry Pi</span><span>NeoPixel</span><span>GPIO</span><span>Hardware fabrication</span></div>
       </div>
     </section>
 
