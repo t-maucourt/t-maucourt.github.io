@@ -254,6 +254,8 @@ ul.points li::before {
   padding: 26px 28px;
 }
 
+.project + .project { margin-top: 18px; }
+
 .project-head {
   display: flex;
   justify-content: space-between;
