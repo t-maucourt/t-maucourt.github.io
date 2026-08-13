@@ -41,8 +41,7 @@
       <p>I came to engineering from microbiology and bioinformatics rather than a CS degree, which set the habit early:
         learn whatever the problem actually needs. Python in depth for production work, and search systems have followed
         me around since 2018 — from Elasticsearch at Waycom through to RAG and vector retrieval at RANE. Years later, the
-        first week on something I don't understand yet is still my favorite part of the job — nobody asked me to
-        build Oriel.</p>
+        first week on something I don't understand yet is still my favorite part of the job.</p>
 
       <div class="contact">
         <span>
@@ -114,7 +113,6 @@
           <li>Built the platform's Elasticsearch backend and the stack around it, after what Django REST Framework offered stopped being enough for the search the product needed.</li>
           <li>A use case that landed on it later grew into one of the bigger things I shipped there: an inventory built with another developer for the network engineering team — VLANs, LAN and WAN addressing, the hardware itself. What they recorded there fed the existing tool that generated router configurations and pushed them onto physical routers before they shipped to customers.</li>
           <li>Searching by IP address and range was what made it work for them, and my introduction to what Elasticsearch could do beyond plain text.</li>
-          <li>Owned the operational side too: RabbitMQ for asynchronous processing, Kibana and Grafana for the monitoring that kept it healthy.</li>
         </ul>
         <div class="stack"><span class="core">Python</span><span>Django REST Framework</span><span>PostgreSQL</span><span class="core">Elasticsearch</span><span>RabbitMQ</span><span>Grafana</span></div>
       </div>
@@ -175,7 +173,7 @@
             bundled call. Measured across a 270-case eval suite.</span>
         </div>
         <ul class="points">
-          <li>Chose a hosted LLM over running models locally so the app costs almost nothing to run — a per-query API call beats paying for a machine big enough to do the extraction itself. The static prompt prefix is cached only while traffic keeps it warm, and goes cold when the app is idle. The tradeoff is that queries leave my infrastructure: fine here, not for every use case.</li>
+          <li>Chose a hosted LLM over running models locally so the app costs almost nothing to run — a per-query API call beats paying for a machine big enough to do the extraction itself. The tradeoff is that queries leave my infrastructure: fine here, not for every use case.</li>
           <li>Replaced the live MeSH lookup API with a prebuilt in-memory map, removing the network from the request path entirely.</li>
         </ul>
         <div class="stack"><span class="core">Python</span><span class="core">FastAPI</span><span>pydantic-ai</span><span>HTMX</span><span>Fireworks AI</span><span>MeSH</span></div>
