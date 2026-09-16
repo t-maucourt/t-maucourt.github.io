@@ -35,9 +35,9 @@
       </button>
       <h1>Thomas Maucourt</h1>
       <div class="role">Senior Software Engineer</div>
-      <p class="lede">Senior backend engineer. I design and build the data systems and APIs that products run on, and
-        I've learned that shipping them well counts for as much as building them — small visible increments that
-        non-technical stakeholders can see and react to, while the harder work keeps moving underneath.</p>
+      <p class="lede">I design and build the data systems and APIs that products run on, and I've learned that shipping
+        them well counts for as much as building them: small visible increments that non-technical stakeholders can
+        see and react to, while the harder work keeps moving underneath.</p>
       <p>I came to engineering from microbiology and bioinformatics rather than a CS degree, which set the habit early:
         learn whatever the problem actually needs. Python in depth for production work, and search systems have followed
         me around since 2018 — from Elasticsearch at Waycom through to RAG and vector retrieval at RANE. Years later, the
@@ -72,15 +72,15 @@
           <div class="entry-date">Jun 2025 — Jan 2026</div>
         </div>
         <div class="entry-org">RANE (Risk Assistance Network + Exchange) <span>· Boston, MA</span></div>
-        <p>Architected high-performance data systems and vector search pipelines, and scaled the retrieval architecture
-          behind the platform.</p>
+        <p>Designed the data systems and vector search pipelines behind the platform, and scaled the retrieval stack as
+          usage grew.</p>
         <ul class="points">
           <li>Built the vector search proof of concept that made the case for the approach internally. It was adopted
             into the production retrieval stack, where the team took it further — reranking results on document date to
             favor more recent sources.</li>
           <li>Worked in small, demonstrable increments so non-technical stakeholders could follow progress and redirect
             early, while the underlying platform work continued between checkpoints.</li>
-          <li>Wrote the custom internal tooling I use day to day in Go, a language I picked up on my own.</li>
+          <li>Wrote my day-to-day internal tooling in Go, a language I picked up on my own.</li>
         </ul>
         <div class="stack"><span class="core">Python</span><span>Go</span><span class="core">FastAPI</span><span>Falcon</span><span>AWS</span><span>MongoDB</span><span class="core">OpenSearch</span><span class="core">Milvus</span></div>
       </div>
@@ -91,10 +91,10 @@
           <div class="entry-date">Jun 2021 — Jun 2025</div>
         </div>
         <div class="entry-org">RANE (Risk Assistance Network + Exchange) <span>· Boston, MA</span></div>
-        <p>Built and maintained the advanced data systems behind the platform, from ingestion through to search.</p>
+        <p>Built and maintained the data systems behind the platform, from ingestion through to search.</p>
         <ul class="points">
           <li>Implemented the company's first production use of an LLM — a RAG pipeline that summarized the documents returned by an OpenSearch query, so users got an answer alongside their results.</li>
-          <li>Helped migrate authentication from a hand-rolled system to an industry-standard identity provider without disrupting users. Consolidating accounts in one place made managing customers markedly easier afterwards.</li>
+          <li>Helped migrate authentication from a hand-rolled system to an industry-standard identity provider without disrupting users. Consolidating accounts in one place made customer management much easier.</li>
           <li>Turned OpenSearch aggregations into network graphs and other visual representations, so users could see the shape of a result set instead of only a list of hits.</li>
           <li>Mentored an intern over several months as they built an internal monitoring system, with dashboards covering user activity on the site and traffic across our APIs.</li>
         </ul>
@@ -111,8 +111,8 @@
           workflows from Finance to Network Engineering.</p>
         <ul class="points">
           <li>Built the platform's Elasticsearch backend and the stack around it, after what Django REST Framework offered stopped being enough for the search the product needed.</li>
-          <li>A use case that landed on it later grew into one of the bigger things I shipped there: an inventory built with another developer for the network engineering team — VLANs, LAN and WAN addressing, the hardware itself. What they recorded there fed the existing tool that generated router configurations and pushed them onto physical routers before they shipped to customers.</li>
-          <li>Searching by IP address and range was what made it work for them, and my introduction to what Elasticsearch could do beyond plain text.</li>
+          <li>Built an inventory for the network engineering team with another developer — VLANs, LAN and WAN addressing, the hardware itself. What they recorded there fed the existing tool that generated router configurations and pushed them onto physical routers before they shipped to customers.</li>
+          <li>Searching by IP address and range was what made it usable for them. It was also my introduction to what Elasticsearch could do beyond plain text.</li>
         </ul>
         <div class="stack"><span class="core">Python</span><span>Django REST Framework</span><span>PostgreSQL</span><span class="core">Elasticsearch</span><span>RabbitMQ</span><span>Grafana</span></div>
       </div>
@@ -123,8 +123,7 @@
           <div class="entry-date">Mar 2018 — Sep 2018</div>
         </div>
         <div class="entry-org">DEXSTR</div>
-        <p>Implemented high-performance NLP workflows for automated file annotation, focused on scalability and
-          throughput.</p>
+        <p>Built NLP workflows for automated file annotation, tuned for throughput.</p>
         <ul class="points">
           <li>Profiled the pipeline to find the critical path, then optimized it for a gain of over 10% end to end.</li>
         </ul>
@@ -139,8 +138,8 @@
         <div class="entry-org">iGEM Competition <span>· IECB, Pessac</span></div>
         <p>A bioinformatics pipeline built with two other students and an IECB researcher, quantifying differential expression of spliced mRNA isoforms in <em>C. elegans</em> from next-generation sequencing data. The ratios matter: different splice forms can drive different cellular responses, and can act as markers for some conditions.</p>
         <ul class="points">
-          <li>Worked directly with the IECB researcher, understanding the biology behind the question and reporting progress back to him as the pipeline took shape.</li>
-          <li>Profiled and optimized the pipeline so the team could iterate on results faster — this is where I learned the difference between threads and processes, and why Python pushed the answer toward multiprocessing.</li>
+          <li>Worked directly with the IECB researcher, understanding the biology behind the question and reporting progress back to them as the pipeline took shape.</li>
+          <li>Profiled and optimized the pipeline so the team could iterate on results faster. This is where I learned the difference between threads and processes, and why Python pushed the answer toward multiprocessing.</li>
         </ul>
         <div class="stack"><span class="core">Python</span></div>
       </div>
@@ -166,14 +165,14 @@
         <div class="project-tag">Hybrid semantic + knowledge graph search over PubMed, with LLM synthesis</div>
         <p>A research question needs more than a keyword search of PubMed. Stratum merges semantic vector search
           (Qdrant) with knowledge graph traversal (Neo4j entity co-mentions and typed relations) into one hybrid
-          retrieval step, reranks the survivors with a cross-encoder, then answers with an LLM grounded in what was
+          retrieval step, reranks the candidates with a cross-encoder, then answers with an LLM grounded in what was
           actually retrieved.</p>
         <ul class="points">
           <li>Built two independent answer paths on the same retrieval core: a pydantic-ai tool-calling agent that
             decides for itself whether and how many times to search before answering, and a deterministic
             single-shot RAG pipeline for when predictable latency and citation format matter more than adaptive
             reasoning.</li>
-          <li>Every citation the agent emits is checked against what was actually retrieved that turn — a
+          <li>Every citation the agent emits is checked against what was actually retrieved that turn: a
             hallucinated or stale PMID is stripped rather than shown, and the UI warns outright if an answer wasn't
             backed by any search at all.</li>
           <li>Knowledge graph queries also surface "research gaps" — entity pairs that are each individually
@@ -192,7 +191,7 @@
           <div class="project-date">Jun 2026 — Present</div>
         </div>
         <div class="project-tag">Natural language to PubMed query generator, for scientists</div>
-        <p>A researcher types what they are actually looking for. Oriel reads the intent, enriches every concept against
+        <p>A researcher types what they are looking for. Oriel reads the intent, enriches every concept against
           controlled MeSH vocabulary held in memory, and assembles a correct boolean query — shown for confirmation
           before it runs, because implicit grouping is genuinely ambiguous.</p>
         <div class="metric">
@@ -224,10 +223,8 @@
           gets converted into a boolean matrix per character, chunked into scrolling frames, then remapped to
           physical LED index to account for the strip's alternating row wiring.</p>
         <ul class="points">
-          <li>Built the full stack end to end — enclosure fabrication, LED soldering and wiring, GPIO/NeoPixel
-            driver code, and the weather API integration — with no framework or library doing the character
-            rendering for me.</li>
-          <li>Side project, built for fun alongside everything else.</li>
+          <li>Built it end to end: enclosure fabrication, LED soldering and wiring, GPIO/NeoPixel driver code, and the
+            weather API integration, with no framework or library doing the character rendering for me.</li>
         </ul>
         <div class="stack"><span class="core">Python</span><span>Raspberry Pi</span><span>NeoPixel</span><span>GPIO</span><span>Hardware fabrication</span></div>
         <div class="project-links">
@@ -252,7 +249,11 @@
         </div>
         <div class="skill-group">
           <h3>Data &amp; search</h3>
-          <p>Elasticsearch, OpenSearch, Milvus, MongoDB, PostgreSQL</p>
+          <p>Elasticsearch, OpenSearch, Milvus, Qdrant, Neo4j, MongoDB, PostgreSQL</p>
+        </div>
+        <div class="skill-group">
+          <h3>LLM &amp; retrieval</h3>
+          <p>RAG pipelines, vector search, pydantic-ai</p>
         </div>
         <div class="skill-group">
           <h3>Infrastructure</h3>
