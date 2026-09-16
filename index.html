@@ -160,6 +160,34 @@
       <h2>Projects</h2>
       <div class="project">
         <div class="project-head">
+          <div class="project-name">Stratum</div>
+          <div class="project-date">Apr 2026 — Present</div>
+        </div>
+        <div class="project-tag">Hybrid semantic + knowledge graph search over PubMed, with LLM synthesis</div>
+        <p>A research question needs more than a keyword search of PubMed. Stratum merges semantic vector search
+          (Qdrant) with knowledge graph traversal (Neo4j entity co-mentions and typed relations) into one hybrid
+          retrieval step, reranks the survivors with a cross-encoder, then answers with an LLM grounded in what was
+          actually retrieved.</p>
+        <ul class="points">
+          <li>Built two independent answer paths on the same retrieval core: a pydantic-ai tool-calling agent that
+            decides for itself whether and how many times to search before answering, and a deterministic
+            single-shot RAG pipeline for when predictable latency and citation format matter more than adaptive
+            reasoning.</li>
+          <li>Every citation the agent emits is checked against what was actually retrieved that turn — a
+            hallucinated or stale PMID is stripped rather than shown, and the UI warns outright if an answer wasn't
+            backed by any search at all.</li>
+          <li>Knowledge graph queries also surface "research gaps" — entity pairs that are each individually
+            well-studied but never co-mentioned in the same article — shown to the user without ever reaching the
+            LLM, so a display feature can't become another hallucination vector.</li>
+        </ul>
+        <div class="stack"><span class="core">Python</span><span class="core">FastAPI</span><span>pydantic-ai</span><span>Fireworks AI</span><span class="core">Qdrant</span><span class="core">Neo4j</span><span>MongoDB</span><span>HTMX</span><span>scispacy/UMLS</span></div>
+        <div class="project-links">
+          <span class="private">Private repo — happy to walk through it</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
           <div class="project-name">Oriel</div>
           <div class="project-date">Jun 2026 — Present</div>
         </div>
